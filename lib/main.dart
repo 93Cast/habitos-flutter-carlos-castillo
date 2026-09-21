@@ -554,7 +554,7 @@ class _PanelHabitosState extends State<PanelHabitos> {
           ),
 
           const SizedBox(height: 24),
-        ], 
+        ],
       ),
     );
   }
