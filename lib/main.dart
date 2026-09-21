@@ -12,10 +12,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Panel de hábitos',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        colorSchemeSeed: Colors.green,
-        useMaterial3: true,
-      ),
+      theme: ThemeData(colorSchemeSeed: Colors.green, useMaterial3: true),
       home: const PanelHabitos(),
     );
   }
@@ -65,10 +62,7 @@ class _PanelHabitosState extends State<PanelHabitos> {
   void initState() {
     super.initState();
 
-    _cumplidos = List<bool>.filled(
-      _habitos.length,
-      false,
-    );
+    _cumplidos = List<bool>.filled(_habitos.length, false);
   }
 
   @override
@@ -145,10 +139,7 @@ class _PanelHabitosState extends State<PanelHabitos> {
 
   void _reiniciarDia() {
     setState(() {
-      _cumplidos = List<bool>.filled(
-        _habitos.length,
-        false,
-      );
+      _cumplidos = List<bool>.filled(_habitos.length, false);
 
       _meta = _metaInicial;
 
@@ -186,19 +177,14 @@ class _PanelHabitosState extends State<PanelHabitos> {
               padding: const EdgeInsets.all(16),
               child: Column(
                 children: [
-                  const Icon(
-                    Icons.check_circle_outline,
-                    size: 50,
-                  ),
+                  const Icon(Icons.check_circle_outline, size: 50),
 
                   const SizedBox(height: 10),
 
                   Text(
                     'Panel de hábitos del día',
                     textAlign: TextAlign.center,
-                    style: Theme.of(context)
-                        .textTheme
-                        .headlineSmall,
+                    style: Theme.of(context).textTheme.headlineSmall,
                   ),
 
                   const SizedBox(height: 8),
@@ -207,9 +193,7 @@ class _PanelHabitosState extends State<PanelHabitos> {
                     'Mantén el seguimiento de tus hábitos '
                     'y alcanza tu meta diaria.',
                     textAlign: TextAlign.center,
-                    style: Theme.of(context)
-                        .textTheme
-                        .bodyMedium,
+                    style: Theme.of(context).textTheme.bodyMedium,
                   ),
                 ],
               ),
@@ -221,30 +205,23 @@ class _PanelHabitosState extends State<PanelHabitos> {
           // ======================================================
           // PROGRESO
           // ======================================================
-
           Card(
             child: Padding(
               padding: const EdgeInsets.all(16),
               child: Column(
-                crossAxisAlignment:
-                    CrossAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Row(
-                    mainAxisAlignment:
-                        MainAxisAlignment.spaceBetween,
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       const Text(
                         'Progreso del día',
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                        ),
+                        style: TextStyle(fontWeight: FontWeight.bold),
                       ),
 
                       Text(
                         '${(_progreso * 100).round()} %',
-                        style: const TextStyle(
-                          fontWeight: FontWeight.bold,
-                        ),
+                        style: const TextStyle(fontWeight: FontWeight.bold),
                       ),
                     ],
                   ),
@@ -254,8 +231,7 @@ class _PanelHabitosState extends State<PanelHabitos> {
                   LinearProgressIndicator(
                     value: _progreso,
                     minHeight: 10,
-                    borderRadius:
-                        BorderRadius.circular(10),
+                    borderRadius: BorderRadius.circular(10),
                   ),
 
                   const SizedBox(height: 12),
@@ -274,28 +250,20 @@ class _PanelHabitosState extends State<PanelHabitos> {
           // ======================================================
           // MENSAJE MOTIVACIONAL
           // ======================================================
-
           Card(
             child: Padding(
               padding: const EdgeInsets.all(20),
               child: Column(
                 children: [
-                  const Icon(
-                    Icons.emoji_emotions_outlined,
-                    size: 40,
-                  ),
+                  const Icon(Icons.emoji_emotions_outlined, size: 40),
 
                   const SizedBox(height: 10),
 
                   Text(
                     _mensaje,
                     textAlign: TextAlign.center,
-                    style: Theme.of(context)
-                        .textTheme
-                        .headlineSmall
-                        ?.copyWith(
-                          fontWeight: FontWeight.bold,
-                        ),
+                    style: Theme.of(context).textTheme.headlineSmall
+                        ?.copyWith(fontWeight: FontWeight.bold),
                   ),
                 ],
               ),
@@ -307,20 +275,15 @@ class _PanelHabitosState extends State<PanelHabitos> {
           // ======================================================
           // META DEL DÍA
           // ======================================================
-
           Card(
             child: Padding(
               padding: const EdgeInsets.all(16),
               child: Column(
-                crossAxisAlignment:
-                    CrossAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const Text(
                     'Meta del día',
-                    style: TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
-                    ),
+                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                   ),
 
                   const SizedBox(height: 8),
@@ -343,21 +306,15 @@ class _PanelHabitosState extends State<PanelHabitos> {
 
                   Text(
                     'Meta: $_meta hábitos',
-                    style: const TextStyle(
-                      fontWeight: FontWeight.bold,
-                    ),
+                    style: const TextStyle(fontWeight: FontWeight.bold),
                   ),
 
                   if (_metaAlcanzada)
                     const Padding(
                       padding: EdgeInsets.only(top: 12),
                       child: Chip(
-                        avatar: Icon(
-                          Icons.check,
-                        ),
-                        label: Text(
-                          'Meta alcanzada',
-                        ),
+                        avatar: Icon(Icons.check),
+                        label: Text('Meta alcanzada'),
                       ),
                     ),
                 ],
@@ -370,18 +327,11 @@ class _PanelHabitosState extends State<PanelHabitos> {
           // ======================================================
           // MODO ENFOQUE
           // ======================================================
-
           Card(
             child: SwitchListTile(
-              title: const Text(
-                'Modo enfoque',
-              ),
-              subtitle: const Text(
-                'Ocultar hábitos que ya completaste',
-              ),
-              secondary: const Icon(
-                Icons.center_focus_strong,
-              ),
+              title: const Text('Modo enfoque'),
+              subtitle: const Text('Ocultar hábitos que ya completaste'),
+              secondary: const Icon(Icons.center_focus_strong),
               value: _enfoque,
               onChanged: _alternarEnfoque,
             ),
@@ -392,63 +342,47 @@ class _PanelHabitosState extends State<PanelHabitos> {
           // ======================================================
           // LISTA DE HÁBITOS
           // ======================================================
-
           Text(
             'Hábitos de hoy',
-            style: Theme.of(context)
-                .textTheme
-                .titleLarge
-                ?.copyWith(
-                  fontWeight: FontWeight.bold,
-                ),
+            style: Theme.of(context).textTheme.titleLarge
+                ?.copyWith(fontWeight: FontWeight.bold),
           ),
 
           const SizedBox(height: 8),
 
-          ...List.generate(
-            _habitos.length,
-            (index) {
-              // En modo enfoque no mostramos los hábitos
-              // que ya fueron completados.
-              if (_enfoque && _cumplidos[index]) {
-                return const SizedBox.shrink();
-              }
+          ...List.generate(_habitos.length, (index) {
+            // En modo enfoque no mostramos los hábitos
+            // que ya fueron completados.
+            if (_enfoque && _cumplidos[index]) {
+              return const SizedBox.shrink();
+            }
 
-              return Card(
-                child: CheckboxListTile(
-                  value: _cumplidos[index],
-                  onChanged: (_) {
-                    _alternarHabito(index);
-                  },
-                  title: Text(
-                    _habitos[index],
-                  ),
-                  secondary: Icon(
-                    _cumplidos[index]
-                        ? Icons.check_circle
-                        : Icons.radio_button_unchecked,
-                  ),
-                  controlAffinity:
-                      ListTileControlAffinity.trailing,
+            return Card(
+              child: CheckboxListTile(
+                value: _cumplidos[index],
+                onChanged: (_) {
+                  _alternarHabito(index);
+                },
+                title: Text(_habitos[index]),
+                secondary: Icon(
+                  _cumplidos[index]
+                      ? Icons.check_circle
+                      : Icons.radio_button_unchecked,
                 ),
-              );
-            },
-          ),
+                controlAffinity: ListTileControlAffinity.trailing,
+              ),
+            );
+          }),
 
           const SizedBox(height: 24),
 
           // ======================================================
           // NOTA DEL DÍA
           // ======================================================
-
           Text(
             'Nota del día',
-            style: Theme.of(context)
-                .textTheme
-                .titleLarge
-                ?.copyWith(
-                  fontWeight: FontWeight.bold,
-                ),
+            style: Theme.of(context).textTheme.titleLarge
+                ?.copyWith(fontWeight: FontWeight.bold),
           ),
 
           const SizedBox(height: 8),
@@ -456,16 +390,12 @@ class _PanelHabitosState extends State<PanelHabitos> {
           TextField(
             controller: _notaCtrl,
             maxLines: 3,
-            textInputAction:
-                TextInputAction.done,
+            textInputAction: TextInputAction.done,
             decoration: const InputDecoration(
               labelText: 'Escribe una nota',
-              hintText:
-                  '¿Cómo fue tu día?',
+              hintText: '¿Cómo fue tu día?',
               border: OutlineInputBorder(),
-              prefixIcon: Icon(
-                Icons.edit_note,
-              ),
+              prefixIcon: Icon(Icons.edit_note),
             ),
             onSubmitted: (_) {
               _guardarNota();
@@ -478,12 +408,8 @@ class _PanelHabitosState extends State<PanelHabitos> {
             width: double.infinity,
             child: ElevatedButton.icon(
               onPressed: _guardarNota,
-              icon: const Icon(
-                Icons.save,
-              ),
-              label: const Text(
-                'Guardar nota',
-              ),
+              icon: const Icon(Icons.save),
+              label: const Text('Guardar nota'),
             ),
           ),
 
@@ -492,40 +418,28 @@ class _PanelHabitosState extends State<PanelHabitos> {
           // ======================================================
           // NOTA GUARDADA
           // ======================================================
-
           Card(
             child: Padding(
               padding: const EdgeInsets.all(16),
               child: Row(
-                crossAxisAlignment:
-                    CrossAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Icon(
-                    Icons.sticky_note_2_outlined,
-                  ),
+                  const Icon(Icons.sticky_note_2_outlined),
 
                   const SizedBox(width: 12),
 
                   Expanded(
                     child: Column(
-                      crossAxisAlignment:
-                          CrossAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         const Text(
                           'Nota guardada',
-                          style: TextStyle(
-                            fontWeight:
-                                FontWeight.bold,
-                          ),
+                          style: TextStyle(fontWeight: FontWeight.bold),
                         ),
 
                         const SizedBox(height: 6),
 
-                        Text(
-                          _nota.isEmpty
-                              ? 'Sin nota'
-                              : _nota,
-                        ),
+                        Text(_nota.isEmpty ? 'Sin nota' : _nota),
                       ],
                     ),
                   ),
@@ -539,17 +453,12 @@ class _PanelHabitosState extends State<PanelHabitos> {
           // ======================================================
           // REINICIAR DÍA
           // ======================================================
-
           SizedBox(
             width: double.infinity,
             child: OutlinedButton.icon(
               onPressed: _reiniciarDia,
-              icon: const Icon(
-                Icons.refresh,
-              ),
-              label: const Text(
-                'Reiniciar día',
-              ),
+              icon: const Icon(Icons.refresh),
+              label: const Text('Reiniciar día'),
             ),
           ),
 
