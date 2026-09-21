@@ -187,7 +187,7 @@ El modo enfoque se encuentra activado y los hábitos que ya fueron completados s
 
 Se muestra una nota escrita por el usuario y almacenada en el estado de la aplicación.
 
-![Nota guardada](screenshots/nota-guardada.png)
+![Nota guardada](screenshots/P_Adicional.png)
 
 ---
 
@@ -195,7 +195,7 @@ Se muestra una nota escrita por el usuario y almacenada en el estado de la aplic
 
 Todos los hábitos han sido completados y la aplicación muestra un progreso del 100 % junto con el mensaje **"¡Día completado! 🎉"**.
 
-![Día completado](screenshots/dia-completado.png)
+![Día completado](screenshots/P_Adicional1.png)
 
 ---
 
