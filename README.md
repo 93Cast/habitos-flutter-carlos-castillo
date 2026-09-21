@@ -241,8 +241,8 @@ lab-habitos-flutter/
 │   ├── P-2.png
 │   ├── P-6.png
 │   ├── P-10.png
-│   ├── nota-guardada.png
-│   └── dia-completado.png
+│   ├── P_Adicional.png
+│   └── P_Adicional1.png
 │
 ├── .gitignore
 ├── pubspec.yaml
