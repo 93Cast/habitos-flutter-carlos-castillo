@@ -248,6 +248,13 @@ lab-habitos-flutter/
 ├── pubspec.yaml
 └── README.md
 ```
+## 🎥 Video de demostración
+
+En el siguiente video se presenta el funcionamiento de la aplicación **Panel de hábitos del día**, incluyendo la gestión de estado mediante `setState()`, actualización de la interfaz, modo enfoque, registro de notas, cumplimiento de hábitos y reinicio del día.
+
+👉 [Ver video de demostración — Explicación ejercicio Flutter 29-2971-2023.mp4](https://mailutecedusv-my.sharepoint.com/:v:/g/personal/2929712023_mail_utec_edu_sv/IQCcdP2XpGnoSLkDr-NbYH5yAWO26Bc4gE6cYJOdII5wtqg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=hlCKVq)
+
+> El video contiene una demostración práctica y la explicación de los principales aspectos técnicos de la aplicación.
 
 ---
 
